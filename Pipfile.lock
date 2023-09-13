@@ -73,7 +73,6 @@
                 "sha256:f69fcd559dc907ed196ab9df0e48471709175e696d6e698dd4dbe940f96ce66b"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.8'",
             "version": "==2.3.3"
         },
         "flask-bcrypt": {
@@ -172,7 +171,6 @@
                 "sha256:8969ec6d763c856f7073c4c64662882675702efcb114b4bcbb955aea3a069fa7"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.7'",
             "version": "==1.1.0"
         },
         "werkzeug": {
