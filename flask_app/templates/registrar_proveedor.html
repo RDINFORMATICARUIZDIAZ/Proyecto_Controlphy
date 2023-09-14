@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Formulario Proveedor</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="cedula">Cedula o Ruc:</label>
+                        <input type="text" class="form-control" id="cedulaoruc" name="cedulaoruc" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Comercial:</label>
+                        <input type="text" class="form-control" id="nombrecomercial" name="nombrecomercial" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Fax:</label>
+                        <input type="text" class="form-control" id="fax" name="fax">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text">Dirección:</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" required>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="pais">País:</label>
+                        <input type="text" class="form-control" id="pais" name="pais" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Linea Baja:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Celular Responsable:</label>
+                        <input type="tel" class="form-control" id="celular" name="celular" required>
+                    </div>
+                    
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+                event.preventDefault();
+                // Aquí puedes agregar la lógica para enviar el formulario mediante AJAX o realizar otras acciones.
+                alert("Formulario enviado correctamente.");
+            });
+        });
+    </script>
+</body>
+</html>
