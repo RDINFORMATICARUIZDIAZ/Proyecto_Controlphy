@@ -1,4 +1,4 @@
-from flask_app.controllers import contactos, proveedores, index
+from flask_app.controllers import contactos, proveedores, productos, index
 from flask_app import app
 
 
