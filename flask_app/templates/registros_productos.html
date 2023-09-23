@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Formulario de Productos</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="cedula">Código Producto:</label>
+                        <input type="text" class="form-control" id="codproducto" name="codproducto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre de Producto:</label>
+                        <input type="text" class="form-control" id="nombreproducto" name="nombreproducto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Categoria:</label>
+                        <select class="form-control" id="categoria" name="categoria" required>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="pavo">Pavo</option>
+                            <option value="golondrina">Golondrina</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Proveedor:</label>
+                        <select class="form-control" id="proveedor" name="proveedor" required>
+                            <option value="dongato">Don gato</option>
+                            <option value="cocacola">Coca Cola</option>
+                            <option value="cervepar">Cervepar</option>
+                            <option value="fortib">Fortin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Precio de Compra:</label>
+                        <input type="number" class="form-control" id="pcompra" name="pcompra" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text">Precio de Venta:</label>
+                        <input type="number" class="form-control" id="pventa" name="pventa" required>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="fechaNacimiento">Precio de Crédito</label>
+                        <input type="number" class="form-control" id="pcredito" name="pcredito" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fvencimiento">Fecha de Vencimiento:</label>
+                        <input type="date" class="form-control" id="fvencimiento" name="fvencimiento" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="apellido">Impuesto:</label>
+                        <select class="form-control" id="impuesto" name="impuesto" required>
+                            <option value="iva10">Iva 10 %</option>
+                            <option value="cocacola">Iva 5%</option>
+                            <option value="cervepar">Exentas</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="checkbox" id="cbox2" value="second_checkbox" />
+                        <label for="fcirculacion">Fuera de Circulación</label>
+                    </div>
+                    
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/code.jquery.com_jquery-3.7.1.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+                event.preventDefault();
+                // Aquí puedes agregar la lógica para enviar el formulario mediante AJAX o realizar otras acciones.
+                alert("Formulario enviado correctamente.");
+            });
+        });
+    </script>
+</body>
+</html>
