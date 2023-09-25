@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria de Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Categoria de Productos</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                
+                <form id="contactForm">
+                   
+                    <div class="form-group">
+                        <label for="categoriaprod">Nombre de Categoria:</label>
+                        <input type="text" class="form-control" id="categoriaprod" name="categoriaprod" required>
+                    </div>
+             
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/code.jquery.com_jquery-3.7.1.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+                event.preventDefault();
+                // Aquí puedes agregar la lógica para enviar el formulario mediante AJAX o realizar otras acciones.
+                alert("Formulario enviado correctamente.");
+            });
+        });
+    </script>
+</body>
+</html>
